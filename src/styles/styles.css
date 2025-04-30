@@ -1,0 +1,106 @@
+    /* body {
+      font-family: 'Segoe UI';
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+   */
+    /* Creatinng a global css style which will be applied to the corresponding elements and classes
+    -------------------------------------------------------------------------------------------------- */
+
+    /* HEADER TEXT */
+    h1 {
+        color: #2c200a;
+        text-align: start;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    /* OVERALL PAGE DESIGN */
+    form {
+        background-color: #e7cea9;  
+        width: 50%;
+        padding: 4rem 2rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-right: 2px solid #a16b3d;
+    }
+    
+    /* EACH LABLE ON THE PAGE */
+    label {
+        display: block;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    
+    /* DESIGN FOR THE INPUTS AND SELECTORS ON THE PAGE */
+    select,
+    input[type="date"] {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-top: 0.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* DESIGN FOR THE BUTTON WHICH SUMBITS USERS CHOICES AND PRESENTS PHOTOS DEPENDING ON SAID CHOICES */
+    button {
+        background-color: #6e5948;
+        color: white;
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 1rem;
+        transition: background-color 0.2s ease-in-out;
+    }
+  
+    button:hover {
+        background-color: #5a483a;
+    }
+    
+    /* DESIGN FOR THE INFO BUTTON WHICH ALLOWS USER TO SEE HOW THE DEFULT SYSTEM WORKS */
+    .info-button {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 50%;
+        border: 1px solid #2c2b2b;
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .info-button:hover{
+        background-color: #6e594888;
+
+    }
+
+    .info-text {
+        color: #333;
+        display: none;
+        background-color: #fff8f1;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        padding: 0.5rem;
+        max-width: 400px;
+
+    /* Show the info text when hovering over button */
+    .info-button:hover + .info-text {
+      display: block;
+    }
+

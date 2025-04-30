@@ -1,4 +1,5 @@
 <script>
+    import 'C:/Users/Serafima/Documents/Projects/C2C/mars-rover/src/styles/styles.css';
     /* Define Rover Options */
     // Allows user to choose a rover, present aray of dictionaries present rover choices.
     const roverOptions = [
@@ -24,7 +25,7 @@
         { value: 'PANCAM', name: 'Panoramic Camera' },
         { value: 'MINITES', name: 'Miniature Thermal Emission Spectrometer' } 
     ]; 
-
+        // Below are the default values for the rover and camera.
         let selectedRover = 'all';
         let selectedCamera = 'all';
         let startDate = '';
@@ -73,7 +74,10 @@
         
 </script>
 
-<h1>Mars Rover Photo Search</h1>
+<h1>
+    <p> Mars Rover Photo Search </p>
+</h1>
+
 
 <form on:submit|preventDefault={fetchPhotos}>
   <label>
@@ -109,10 +113,11 @@
   <br />
 
   <button type="submit">Search</button>
-</form>
 
-<p>
-  If you leave everything blank, you'll get the most recent photos from all rovers and all cameras
-  (last 7 days).
-</p>
+  <div class="info-container">
+    <button class="info-button">i</button>
+    <p class="info-text">If you leave everything blank, you'll get the most recent photos from all rovers and all cameras (last 7 days).</p>
+  </div>
+
+</form>
 
