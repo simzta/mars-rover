@@ -1,106 +1,204 @@
-    /* body {
-      font-family: 'Segoe UI';
-      background-color: #f5f7fa;
-      margin: 0;
-      padding: 2rem;
-      color: #333;
-    }
-   */
-    /* Creatinng a global css style which will be applied to the corresponding elements and classes
-    -------------------------------------------------------------------------------------------------- */
 
-    /* HEADER TEXT */
-    h1 {
-        color: #2c200a;
-        text-align: start;
-        font-size: 3rem;
-        margin-bottom: 2rem;
-    }
 
-    /* OVERALL PAGE DESIGN */
-    form {
-        background-color: #e7cea9;  
-        width: 50%;
-        padding: 4rem 2rem;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-right: 2px solid #a16b3d;
-    }
-    
-    /* EACH LABLE ON THE PAGE */
-    label {
-        display: block;
-        margin-bottom: 1rem;
-        font-weight: 600;
-    }
-    
-    /* DESIGN FOR THE INPUTS AND SELECTORS ON THE PAGE */
-    select,
-    input[type="date"] {
-        width: 100%;
-        padding: 0.5rem;
-        font-size: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        margin-top: 0.25rem;
-        margin-bottom: 1rem;
-    }
-    
-    /* DESIGN FOR THE BUTTON WHICH SUMBITS USERS CHOICES AND PRESENTS PHOTOS DEPENDING ON SAID CHOICES */
-    button {
-        background-color: #6e5948;
-        color: white;
-        width: 100%;
-        padding: 0.75rem;
-        font-size: 1rem;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        margin-top: 1rem;
-        transition: background-color 0.2s ease-in-out;
-    }
+/* Creatinng a global css style which will be applied to the corresponding elements and classes
+-------------------------------------------------------------------------------------------------- */
+
+/* HEADER TEXT */
+h1 {
+
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+
+    margin-top: 0;
+    margin-right: 4rem;
+
+    padding: 5.5rem;
+
+    border-bottom: 3px solid #6e5948;
+    border-right: 4px solid #6e5948;
+
+    box-sizing: border-box;
+    box-shadow: 10px 6px 0 #a16b3d;
+    background-color: #e7cea9;
+    color: #2c200a;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+
+    margin-right: 7rem;
+    margin-top: 17rem;
+
+    color: #2c200a;
+  }
   
-    button:hover {
-        background-color: #5a483a;
-    }
+  
+  /* Full-page layout */
+  body {
+    color: #333;    
+    font-family: 'brush', sans-serif;
+    min-height: 70rem;
+    margin: 0;
+
+    background-color: #f3e4d7;    
+
+  }
+  
+  /* SEARCH FORM AT THE BOTTOM */
+  form {
+    width: 30rem;
+    height: 37rem;
+
+    box-sizing: border-box;
+    bottom: 2rem;
+    left: 2rem;
+
+    padding: 2rem;
+    border-right: 5px solid #695050;
+    border-left: 2px solid #695050;
+    border-top: 2px solid #695050;
+    border-bottom: 5px solid #695050;
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    box-shadow: 10px 6px 0 #a16b3d;
+    background-color: #e7cea9;    
+  }
+  
+  /* LABELS */
+  label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* INPUTS SECTION */
+  select,
+  input[type="date"] {
+    font-size: 1rem;
+    width: 100%;
+
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+
+    border-radius: 0;
+    border: 1px solid #ccc;    
+  }
+  
+  /* SUBMIT BUTTON */
+  button[type="submit"] {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+
+    color: white;
+    background-color: #6e5948;    
+  }
+  /* HOVER DESIGN FOR SUBMIT BUTTON */
+  button[type="submit"]:hover {
+    background-color: #5a483a;
+  }
+  
+/* DESIGN FOR THE INFO BUTTON WHICH ALLOWS USER TO SEE HOW THE DEFULT SYSTEM WORKS */
+.info-button {
+    width: 13px;
+    height: 13px;
+    display: flex;
+
+    font-size: 0.7rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+
+
+    border-radius: 50%;
+    border: 1px solid #2c2b2b;
+
+    margin-left: 26rem;
+    margin-top: -46px;
+
+    color: rgb(110 89 72);   
+    background-color: #ffffff;
+}
+  /* HOVER DESIGN FOR INFO BUTTON */
+.info-button:hover{
+    background-color: #6e594888;
+
+}
+
+.info-text {
+    display: none;
+    max-width: 400px;
+    font-size: 0.9rem;
+
+
+    padding: 0.5rem;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    margin-top: 10px;
+
+    color: #333;
+    background-color: #fff8f1;   
+}   
     
-    /* DESIGN FOR THE INFO BUTTON WHICH ALLOWS USER TO SEE HOW THE DEFULT SYSTEM WORKS */
-    .info-button {
-        background-color: #ffffff;
-        color: rgb(0, 0, 0);
-        font-size: 1.1rem;
-        font-weight: bold;
-        border-radius: 50%;
-        border: 1px solid #2c2b2b;
-        width: 30px;
-        height: 30px;
-        margin-left: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+/* SHOWS INFO TEXT WHEN HOVERING */
+.info-button:hover + .info-text {
+    display: block;
+    
+}
+  
+  /* FOR PHOTO RESULTS */
+  .image-results-container {
+    max-width: 85rem;
+    max-height: 37rem;    
+    margin-left: auto;
+    margin-right: auto;
 
-    }
+    overflow-y: scroll;
+    overflow-x: hidden;
 
-    .info-button:hover{
-        background-color: #6e594888;
 
-    }
 
-    .info-text {
-        color: #333;
-        display: none;
-        background-color: #fff8f1;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-size: 0.9rem;
-        margin-top: 10px;
-        padding: 0.5rem;
-        max-width: 400px;
+    top: -.5rem;
+    right: -92rem;
+    position: absolute;
 
-    /* Show the info text when hovering over button */
-    .info-button:hover + .info-text {
-      display: block;
-    }
+    padding: 1.5rem;
 
+    border-right: 5px solid #6e5948;
+    border-left: 2px solid #6e5948;
+    border-bottom: 5px solid #6e5948;
+    border-top: 2px solid #6e5948;
+
+    box-sizing: border-box;
+    box-shadow: 8px 8px 0 #a16b3d;
+    background-color: #e7cea9;
+  }
+
+  
+  .image-results {
+    width: 65rem;
+    height: 70rem;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+    justify-content: flex-start;
+  }
+  
+  .image-results img {
+    width: calc(30% - 1rem); /* 4 images per row with a gap of 1rem */
+    height: 10rem;
+    border-radius: 0.4rem;
+
+    border: 2px solid #a16b3d;
+    box-sizing: border-box;  /* MAKES SURE THE BORDER IS INCLUDED IN THE WIDTH AND HEIGHT */
+  }
