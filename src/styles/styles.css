@@ -43,7 +43,7 @@ h1 {
     min-height: 70rem;
     margin: 0;
 
-    background-color: #f3e4d7;    
+    background-color: #e7cea96b;    
 
   }
   
@@ -133,16 +133,18 @@ h1 {
 
 .info-text {
     display: none;
-    max-width: 400px;
-    font-size: 0.9rem;
+    position: absolute;
+    width: 390px;
+    top: 90%;
+    left: 96%;
 
+    transform: translateY(-50%);
 
-    padding: 0.5rem;
 
     border: 1px solid #ccc;
     border-radius: 5px;
-
     margin-top: 10px;
+
 
     color: #333;
     background-color: #fff8f1;   
